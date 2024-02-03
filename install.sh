@@ -17,30 +17,34 @@ sudo apt install ninja-build gettext cmake unzip curl fzf fd-find stow zsh -y
 echo -e "\e[1;32mDeps have been installed.\e[0m"
 sleep 1
 
-## Add GitHub CLI repository and install gh
-#echo -e "\e[1;32mAdding GitHub CLI repository...\e[0m"
-#sleep 2
-#curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \
-#&& sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg \
-#&& echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
-#echo -e "\e[1;32mGitHub CLI has been added...\e[0m"
-#sleep 1
-#
-#echo -e "\e[1;32mUpdating package list...\e[0m"
-#sleep 2
-#sudo apt update
-#echo -e "\e[1;32mPackage list has been updated...\e[0m"
-#sleep 1
-#
-#echo -e "\e[1;32mInstalling GitHub CLI...\e[0m"
-#sleep 2
-#sudo apt install gh -y
-#echo -e "\e[1;32mGitHub CLI has been installed...\e[0m"
-#sleep 1
-#
-## Run "gh auth login" after gh is installed
-#echo -e "\e[1;32mLogin to github using CLI...\e[0m"
-## gh auth login
+# Add GitHub CLI repository and install gh
+echo -e "\e[1;32mAdding GitHub CLI repository...\e[0m"
+sleep 2
+curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \
+&& sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg \
+&& echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+echo -e "\e[1;32mGitHub CLI has been added...\e[0m"
+sleep 1
+
+echo -e "\e[1;32mUpdating package list...\e[0m"
+sleep 2
+sudo apt update
+echo -e "\e[1;32mPackage list has been updated...\e[0m"
+sleep 1
+
+echo -e "\e[1;32mInstalling GitHub CLI...\e[0m"
+sleep 2
+sudo apt install gh -y
+echo -e "\e[1;32mGitHub CLI has been installed...\e[0m"
+sleep 1
+
+# Run "gh auth login" after gh is installed
+echo -e "\e[1;32mLogin to github using CLI...\e[0m"
+gh auth login
+
+# Clone the .dotfiles repo
+echo -e "\e[1;32mLogin to github using CLI...\e[0m"
+gh repo clone vague2k/.dotfiles
 
 # Clone the neovim repo using gh repo clone
 echo -e "\e[1;32mCreating and navigating to Documents/GitHub/apps directory...\e[0m"
