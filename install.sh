@@ -99,13 +99,19 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.local/share/
 echo -e "\e[1;32mOh My Zsh has been installed.\e[0m"
 sleep 1
 
+exit
+
+echo -e "\e[1;32mStowing zsh, nvim...\e[0m"
+sleep 1
 stow ~/.dotfiles/zsh
-stow ~/.dotfiles/git
 stow ~/.dotfiles/nvim
-stow ~/.dotfiles/npm
 
 echo -e "\e[1;32mSetting Zsh as the default shell...\e[0m"
 chsh -s $(which zsh)
+source ~/.config/zsh/.zshrc
+echo -e "\e[1;32mZsh is now the default shell.\e[0m"
+sleep 1
+
 source ~/.config/zsh/.zshrc
 echo -e "\e[1;32mZsh is now the default shell.\e[0m"
 sleep 1
