@@ -35,6 +35,7 @@ stow zsh
 stow nvim
 stow npm
 stow ignore
+stow Linux
 
 ###----- LOCAL NVIM PLUGINS -----###
 echo -e "\e[1;32mCloning local neovim plugins...\e[0m"
