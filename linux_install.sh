@@ -36,6 +36,15 @@ stow nvim
 stow npm
 stow ignore
 
+###----- LOCAL NVIM PLUGINS -----###
+echo -e "\e[1;32mCloning local neovim plugins...\e[0m"
+sleep 2
+mkdir -p ~/Documents/GitHub
+cd ~/Documents/GitHub
+gh repo clone vague2k/huez.nvim
+mv huez.nvim huez
+gh repo clone vague2k/cd-project.nvim
+
 ###----- INSTALL GOLANG -----###
 echo -e "\e[1;32mInstalling GoLang...\e[0m"
 sleep 2
@@ -45,7 +54,7 @@ wget https://golang.org/dl/go1.21.6.linux-amd64.tar.gz -O go1.21.6.linux-amd64.t
 tar -xzf go1.21.6.linux-amd64.tar.gz
 mkdir -p ~/.local/share
 mv ~/Downloads/go ~/.local/share/
-export PATH=$PATH:~/.local/share/go/bin
+rm -rf go1.21.6.linux-amd64.tar.gz
 cd ~
 sleep 1
 
