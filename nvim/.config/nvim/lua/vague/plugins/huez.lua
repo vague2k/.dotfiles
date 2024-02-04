@@ -1,6 +1,6 @@
 return {
     "vague2k/huez.nvim",
-    dir = Get_github_path("huez"),
+    dev = true,
     config = function()
         require("huez").setup({
             -- the filepath where your theme will be saved

@@ -17,6 +17,10 @@ require("lazy").setup({
     { import = "vague.plugins.themes" },
     { import = "vague.plugins.misc" },
 }, {
+    -- GitHub repo name and local repo name should be the same
+    dev = {
+        path = Get_github_path(),
+    },
     performance = {
         rtp = {
             disabled_plugins = {
