@@ -64,11 +64,12 @@ sleep 1
 
 
 echo -e "\e[1;32mInstalling GoLang...\e[0m"
-mkdir ~/Downloads \
-&& cd ~/Downloads \
-&& wget https://golang.org/dl/go1.21.6.linux-amd64.tar.gz -O go1.21.6.linux-amd64.tar.gz \
-&& tar -xzf go1.21.6.linux-amd64.tar.gz \
-&& mv go ~/.local/share/ \
+mkdir ~/Downloads
+cd ~/Downloads
+wget https://golang.org/dl/go1.21.6.linux-amd64.tar.gz -O go1.21.6.linux-amd64.tar.gz
+tar -xzf go1.21.6.linux-amd64.tar.gz
+mv go ~/.local/share/
+export PATH=$PATH:~/.local/share/go/bin
 && cd ~
 echo -e "\e[1;32mGoLang has been installed.\e[0m"
 sleep 1
