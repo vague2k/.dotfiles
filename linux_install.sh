@@ -63,7 +63,7 @@ sleep 1
 echo -e "\e[1;32mInstalling Node-JS.\e[0m"
 curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash - &&\
 sudo apt install -y nodejs
-npm install -g typescript typescript-language-server
+sudo npm install -g typescript typescript-language-server
 sleep 1
 
 ###----- INSTALL NVIM-NIGHTLY -----###
