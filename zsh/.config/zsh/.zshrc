@@ -17,7 +17,7 @@ export XDG_CONFIG_DIRS="/etc/xdg"
 
 ###------- EXPORTS -------###
 
-# export ZSH="$XDG_DATA_HOME/oh-my-zsh"
+export ZSH="$XDG_DATA_HOME/oh-my-zsh"
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 
 export ANDROID_HOME="$XDG_DATA_HOME/android"
@@ -27,6 +27,7 @@ export HISTFILE="$XDG_STATE_HOME/zsh/history"
 export LESSHISTFILE="$XDG_STATE_HOME/less/history"
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
+
 ###------- SOURCE -------###
 
 source $ZDOTDIR/ghplug.zsh
@@ -41,6 +42,9 @@ alias zshrc="cd $ZDOTDIR && nvim .zshrc"
 alias zshrco="cd $ZDOTDIR && nvim ."
 alias zshso="cd $XDG_CONFIG_HOME/zsh && source .zshrc"
 alias pull="git pull"
+
+###------- PATH -------###
+export PATH=$PATH:$GOPATH/bin
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
