@@ -1,0 +1,23 @@
+# fd uses this .ignore file to ignore specific dirs
+# fd will be used in fzf
+# dirs with a ! infront of their name, will be unignored
+
+.DS_Store
+.Trash
+.cache
+!.config
+!.dotfiles
+!.ignore
+.local
+.vscode
+!.zshenv
+Applications
+!Brewfile
+!Desktop
+!Documents
+!Downloads
+Library
+Movies
+Music
+Pictures
+Public
