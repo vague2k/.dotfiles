@@ -9,3 +9,4 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export EDITOR=nvim
 
 export PATH="$HOME/.local/bin:$PATH"
+export PATH=$PATH:/.local/share/go/bin
