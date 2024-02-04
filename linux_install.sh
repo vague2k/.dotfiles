@@ -36,12 +36,6 @@ stow nvim
 stow npm
 stow ignore
 
-###----- INIT ZSH -----###
-echo -e "\e[1;32mInitializing Zsh\e[0m"
-sleep 2
-zsh
-sudo chsh -s $(which zsh)
-
 ###----- INSTALL GOLANG -----###
 echo -e "\e[1;32mInstalling GoLang...\e[0m"
 sleep 2
@@ -77,5 +71,6 @@ git clone https://github.com/neovim/neovim.git \
 cd ~
 sleep 1
 
-echo -e "\e[1;32mDone.\e[0m"
+echo
+echo -e "\e[1;32mDone. Remember to init ZSH by typing zsh.\e[0m"
 echo
