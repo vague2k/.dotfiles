@@ -28,17 +28,19 @@ sleep 1
 echo -e "\e[1;32mLogin to github using CLI...\e[0m"
 gh auth login
 
-###----- CLONE .DOTFILES -----###
-echo -e "\e[1;32mCloning .dotfiles and stowing...\e[0m"
-sleep 2
-gh repo clone vague2k/.dotfiles
-cd ~/.dotfiles
-
 ###----- STOW APPROPRIATE .DOTFILES -----###
+echo -e "\e[1;32mStowing appropriate files from .dotfiles...\e[0m"
+sleep 2
 stow zsh
 stow nvim
 stow npm
 stow ignore
+
+###----- INIT ZSH -----###
+echo -e "\e[1;32mInitializing Zsh\e[0m"
+sleep 2
+zsh
+sudo chsh -s $(which zsh)
 
 ###----- INSTALL GOLANG -----###
 echo -e "\e[1;32mInstalling GoLang...\e[0m"
@@ -48,7 +50,7 @@ cd ~/Downloads
 wget https://golang.org/dl/go1.21.6.linux-amd64.tar.gz -O go1.21.6.linux-amd64.tar.gz
 tar -xzf go1.21.6.linux-amd64.tar.gz
 mkdir -p ~/.local/share
-mv go ~/.local/share/
+mv ~/Downloads/go ~/.local/share/
 export PATH=$PATH:~/.local/share/go/bin
 cd ~
 sleep 1
