@@ -83,7 +83,7 @@ sleep 1
 
 echo
 echo -e "\e[1;32mDone.\e[0m"
-echo -e "\e[1;32mRemember to init ZSH by typing zsh.\e[0m"
+echo -e "\e[1;32mRemember to switch to WSL and init ZSH by typing zsh.\e[0m"
 echo
 echo -e "\e[1;32mAnd also change the default shell by running\e[0m"
 echo -e "sudo chsh -s $(which zsh)"
