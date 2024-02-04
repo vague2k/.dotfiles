@@ -43,7 +43,6 @@ sleep 2
 mkdir -p ~/Documents/GitHub
 cd ~/Documents/GitHub
 gh repo clone vague2k/huez.nvim
-mv huez.nvim huez
 gh repo clone vague2k/cd-project.nvim
 
 ###----- INSTALL GOLANG -----###
