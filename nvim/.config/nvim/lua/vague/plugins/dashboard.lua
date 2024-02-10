@@ -18,9 +18,6 @@ return {
         local plug = devicons.icons_by_filename["webpack"].icon
 
         dashboard.section.header.val = {
-            [[                                          ]],
-            [[                                          ]],
-            [[                                          ]],
             [[          ⣴⣶⣤⡤⠦⣤⣀⣤⠆     ⣈⣭⣿⣶⣿⣦⣼⣆          ]],
             [[           ⠉⠻⢿⣿⠿⣿⣿⣶⣦⠤⠄⡠⢾⣿⣿⡿⠋⠉⠉⠻⣿⣿⡛⣦       ]],
             [[                 ⠈⢿⣿⣟⠦ ⣾⣿⣿⣷    ⠻⠿⢿⣿⣧⣄     ]],
