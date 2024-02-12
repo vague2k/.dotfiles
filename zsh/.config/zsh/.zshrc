@@ -23,6 +23,7 @@ export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export ANDROID_HOME="$XDG_DATA_HOME/android"
 export DOCKER_CONFIG="$XDG_CONFIG_HOME/docker"
 export GOPATH="$XDG_DATA_HOME/go"
+export CARGO_HOME="$XDG_DATA_HOME/cargo"
 export HISTFILE="$XDG_STATE_HOME/zsh/history"
 export LESSHISTFILE="$XDG_STATE_HOME/less/history"
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/.npmrc"
@@ -42,9 +43,11 @@ alias zshrc="cd $ZDOTDIR && nvim .zshrc"
 alias zshrco="cd $ZDOTDIR && nvim ."
 alias zshso="cd $XDG_CONFIG_HOME/zsh && source .zshrc"
 alias pull="git pull"
+alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
 
 ###------- PATH -------###
 export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$CARGO_HOME/bin
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
