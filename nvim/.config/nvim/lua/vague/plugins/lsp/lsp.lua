@@ -76,21 +76,6 @@ return {
                         })
                     end,
 
-                    tsserver = function()
-                        require("lspconfig").tsserver.setup({
-
-                            -- organize imports on save
-                            vim.api.nvim_create_autocmd({ "BufWritePost" }, {
-                                callback = function()
-                                    vim.lsp.buf.execute_command({
-                                        command = "_typescript.organizeImports",
-                                        arguments = { vim.fn.expand("%:p") },
-                                    })
-                                end,
-                            }),
-                        })
-                    end,
-
                     tailwindcss = function()
                         local on_attach = function(_, bufnr)
                             -- show specific tailwind class name colors whenever we attach to tailwind lsp
