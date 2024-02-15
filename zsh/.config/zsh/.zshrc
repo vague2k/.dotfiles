@@ -51,3 +51,6 @@ export PATH=$PATH:$CARGO_HOME/bin
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
+
+# a smarter cd command, see https://github.com/ajeetdsouza/zoxide for more info
+eval "$(zoxide init --cmd cd zsh)"
